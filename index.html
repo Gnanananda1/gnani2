@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRI SATYA EYE CARE AND OPTICALS</title>
+    <link rel="stylesheet" href='style.css'>
+</head>
+<body>
+
+<h1>SRI SATYA EYE CARE AND OPTICALS</h1><hr><hr><hr>
+<marquee bgcolor="aqua">Dr.DHARMANA KAMESWARA RAO,(DOT,DOA,VT IN L V PRASSAD EYE HOSPITAL)</marquee><hr><hr><hr>
+<marquee bgcolor="aqua">ADDRESS: HIRAMANDLAM, NEAR RTC COMPLEX(532459)</marquee>
+CONTACT NO: 9573693655, 9618693655,9392790896</p>
+
+<img src='./IMG-20221009-WA0045.jpg' alt="Sri Satya Eye Care Logo" width="300" height="200">
+
+<form action="{{ url_for('process_form') }}" method="post">
+    <label for="name">Name of the Patient:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="dob">Date of Birth of Patient:</label>
+    <input type="date" id="dob" name="dob" required><br>
+
+    <label for="age">Age of the Patient:</label>
+    <input type="number" id="age" name="age" required><br>
+
+    <label for="phone_no">Phone No:</label>
+    <input type="tel" id="phone_no" name="phone_no" required><br>
+
+    <label for="p_lefteye">Power of Left Eye:</label>
+    <input type="number" id="p_lefteye" name="p_lefteye" required><br>
+
+    <label for="r_righteye">Power of Right Eye:</label>
+    <input type="number" id="r_righteye" name="r_righteye" required><br>
+
+    <label for="type_spectials">Type of Spectials:</label>
+    <select id="type_spectials" name="type_spectials" required>
+        <option value="tommy">Tommy</option>
+        <option value="frameless">Frameless</option>
+        <option value="frame">Frame</option>
+    </select><br>
+
+    <label for="cost">Cost of Checking:</label>
+    <input type="number" id="cost" name="cost" required><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<!-- Display Section -->
+<div id="display-section">
+    {% if receipt %}
+        <pre>
+            {{ receipt }}
+        </pre>
+    {% endif %}
+</div>
+
+</body>
+</html>
